@@ -1,0 +1,27 @@
+branches:
+  only:
+    - develop
+
+language: node_js
+node_js: "node"
+
+cache:
+  yarn: true
+  directories:
+    - node_modules
+
+install:
+  - yarn
+
+script:
+  - yarn run build
+
+deploy:
+  provider: page
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  on:
+    branch: master
+  local-dir: dist
+  target-branch: master
