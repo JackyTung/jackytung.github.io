@@ -6,6 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 const config = merge(baseWebpackConfig, {
   mode: 'production',
@@ -30,6 +31,12 @@ const config = merge(baseWebpackConfig, {
       filename: 'index.html',
       template: 'src/index.prod.html',
     }),
+    new CopyWebpackPlugin([
+      {
+        from: path.resolve(__dirname, "static/"),
+        to: path.resolve(__dirname, "dist/")
+      }
+    ]),
   ],
 });
 

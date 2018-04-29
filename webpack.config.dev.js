@@ -2,6 +2,7 @@ const path = require('path');
 const merge = require('webpack-merge');
 const baseWebpackConfig = require('./webpack.config.base');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 const config = merge(baseWebpackConfig, {
   mode: 'development',
@@ -11,7 +12,7 @@ const config = merge(baseWebpackConfig, {
     filename: 'app.js',
   },
   devServer: {
-    contentBase: false,
+    contentBase: path.join(__dirname, "static"),
     port: 8084,
   },
   plugins: [
@@ -20,6 +21,12 @@ const config = merge(baseWebpackConfig, {
       template: 'src/index.dev.html',
       inject: false,
     }),
+    new CopyWebpackPlugin([
+      {
+        from: path.resolve(__dirname, "static/"),
+        to: path.resolve(__dirname, "dist/")
+      }
+    ]),
   ],
 });
 
