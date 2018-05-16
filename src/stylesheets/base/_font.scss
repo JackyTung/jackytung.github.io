@@ -1,0 +1,82 @@
+/* Font size: 
+developed 6 type sizes (s1-s6).
+
+s1: Header/Title
+s2: Title/Subtitle
+s3: Subtitle/News link title
+s4: Bodycopy/News link summary
+s5: Navbar/caption/Notes/breadcrumbs
+s6: Micro bread crumbs
+
+*/
+@mixin font-s1-size {
+  font-size: 4.4rem;
+
+  @include tablet {
+    font-size: 4.4rem;
+  }
+
+  @include mobile {
+    font-size: 3.2rem;
+  }
+}
+
+@mixin font-s2-size {
+  font-size: 2.4rem;
+
+  @include tablet {
+    font-size: 2.4rem;
+  }
+
+  @include mobile {
+    font-size: 2rem;
+  }
+}
+
+@mixin font-s3-size {
+  font-size: 2rem;
+
+  @include tablet {
+    font-size: 2.1rem;
+  }
+
+  @include mobile {
+    font-size: 1.8rem;
+  }
+}
+
+@mixin font-s4-size {
+  font-size: 1.6rem;
+
+  @include tablet {
+    font-size: 1.6rem;
+  }
+
+  @include mobile {
+    font-size: 1.6rem;
+  }
+}
+
+@mixin font-s5-size {
+  font-size: 1.4rem;
+
+  @include tablet {
+    font-size: 1.5rem;
+  }
+
+  @include mobile {
+    font-size: 1.5rem;
+  }
+}
+
+@mixin font-s6-size {
+  font-size: 1.2rem;
+
+  @include tablet {
+    font-size: 1.3rem;
+  }
+
+  @include mobile {
+    font-size: 1.2rem;
+  }
+}

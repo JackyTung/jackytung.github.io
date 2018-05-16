@@ -1,0 +1,14 @@
+// Core
+@import "bootstrap-4.1.0/functions";
+@import "bootstrap-4.1.0/variables";
+@import "bootstrap-4.1.0/mixins";
+
+// Optional
+@import "bootstrap-4.1.0/grid";
+@import "bootstrap-4.1.0/buttons";
+@import "bootstrap-4.1.0/transitions";
+@import "bootstrap-4.1.0/nav";
+@import "bootstrap-4.1.0/navbar";
+
+// Core: Put the last
+@import "bootstrap-4.1.0/utilities";
