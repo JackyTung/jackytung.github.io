@@ -29,7 +29,7 @@ export default {
 </template>
 
 <style lang="scss">
-@import 'Src/stylesheets/main.scss';
+@import '~Src/stylesheets/main.scss';
 .Navbar {
   background-color: rgba(black, 0.5);
 
