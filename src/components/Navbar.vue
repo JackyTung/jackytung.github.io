@@ -35,12 +35,46 @@ export default {
 
   .brand {
     width: 19rem;
+
+    @include mobile {
+      padding: 0.5rem 1rem;
+    }
   }
 
   .nav-text {
     color: white;
+    padding: 2.5rem 0;
     @include font-s5-size;
     text-decoration: none;
+    text-align: center;
+
+    &:hover {
+      background-color: rgba(#585858, 1);
+    }
+
+    @include mobile {
+      text-align: left;
+      padding-left: 1rem;
+    }
+  }
+
+  // overwrite
+  &.navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .navbar-toggler-icon {
+    background-image: url('~Src/assets/images/icon-menu.svg');
+    fill: white;
+  }
+
+  .navbar-toggler {
+    outline: none;
   }
 }
 </style>
